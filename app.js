@@ -308,7 +308,26 @@
     link.addEventListener('click', () => {
       const toggle = document.getElementById('nav-toggle');
       if (toggle) toggle.checked = false;
+      syncHamburger();
     });
   });
+
+
+  // ===== HAMBURGER ↔ CHECKBOX SYNC =====
+  function syncHamburger() {
+    const toggle = document.getElementById('nav-toggle');
+    const hamburger = document.querySelector('.nav__hamburger');
+    if (!toggle || !hamburger) return;
+    if (toggle.checked) {
+      hamburger.classList.add('nav__hamburger--open');
+    } else {
+      hamburger.classList.remove('nav__hamburger--open');
+    }
+  }
+
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('change', syncHamburger);
+  }
 
 })();
