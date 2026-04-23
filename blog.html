@@ -1,1 +1,155 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Utilis Technologies</title>
+    <meta name="description" content="Read our latest insights on AI strategy, governance, automation, and enterprise solutions.">
+    <meta property="og:title" content="Blog - Utilis Technologies">
+    <meta property="og:description" content="Read our latest insights on AI strategy, governance, automation, and enterprise solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://utilistech.co.uk/blog.html">
+    <link rel="canonical" href="https://utilistech.co.uk/blog.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "url": "https://utilistech.co.uk/blog.html",
+        "name": "Utilis Technologies Blog"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; }
+        header { padding: 2rem; border-bottom: 1px solid #e0e0e0; }
+        nav a { margin-right: 2rem; text-decoration: none; color: #1a1a1a; }
+        .blog-hero { padding: 4rem 2rem; text-align: center; }
+        .blog-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .featured { padding: 2rem; max-width: 800px; margin: 2rem auto; border: 2px solid #000; border-radius: 0.5rem; }
+        .featured-tag { display: inline-block; background: #000; color: #fff; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.85rem; margin-bottom: 1rem; }
+        .featured h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .featured-meta { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .blog-list { max-width: 1000px; margin: 2rem auto; padding: 0 2rem; }
+        .blog-categories { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .category-btn { padding: 0.5rem 1rem; border: 1px solid #e0e0e0; background: #fff; cursor: pointer; border-radius: 0.25rem; }
+        .category-btn.active { background: #000; color: #fff; }
+        .article-item { padding: 1.5rem 0; border-bottom: 1px solid #e0e0e0; display: none; }
+        .article-item.show { display: block; }
+        .article-item h3 { margin-bottom: 0.5rem; }
+        .article-meta { color: #666; font-size: 0.9rem; }
+        .article-category { display: inline-block; background: #f0f0f0; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.8rem; }
+        footer { padding: 2rem; border-top: 1px solid #e0e0e0; text-align: center; color: #666; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog.html">Blog</a>
+        </nav>
+    </header>
+    
+    <section class="blog-hero">
+        <h1>Our Blog</h1>
+        <p>Insights on AI strategy, governance, and enterprise solutions</p>
+    </section>
+    
+    <section class="featured">
+        <span class="featured-tag">Buyer's Guide</span>
+        <h2>AI Consultancy UK: How to Choose the Right Partner</h2>
+        <div class="featured-meta">April 2026 • 8 min read</div>
+        <p>A comprehensive guide to evaluating AI consultancies and selecting the right partner for your organization's AI journey.</p>
+    </section>
+    
+    <section class="blog-list">
+        <div class="blog-categories">
+            <button class="category-btn active" onclick="filterCategory('all')">All</button>
+            <button class="category-btn" onclick="filterCategory('strategy')">Strategy</button>
+            <button class="category-btn" onclick="filterCategory('governance')">Governance</button>
+            <button class="category-btn" onclick="filterCategory('automation')">Automation</button>
+            <button class="category-btn" onclick="filterCategory('ai-foundations')">AI Foundations</button>
+            <button class="category-btn" onclick="filterCategory('case-studies')">Case Studies</button>
+            <button class="category-btn" onclick="filterCategory('buyers-guide')">Buyer's Guide</button>
+        </div>
+        
+        <article class="article-item show" data-category="strategy">
+            <h3>Building Your AI Strategy</h3>
+            <div class="article-meta">March 2026 • 6 min read • <span class="article-category">Strategy</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="governance">
+            <h3>AI Governance Best Practices</h3>
+            <div class="article-meta">February 2026 • 5 min read • <span class="article-category">Governance</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="automation">
+            <h3>Automating with Microsoft 365</h3>
+            <div class="article-meta">January 2026 • 7 min read • <span class="article-category">Automation</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="ai-foundations">
+            <h3>AI Fundamentals for Business Leaders</h3>
+            <div class="article-meta">December 2025 • 8 min read • <span class="article-category">AI Foundations</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="case-studies">
+            <h3>Case Study: Enterprise AI Implementation</h3>
+            <div class="article-meta">November 2025 • 10 min read • <span class="article-category">Case Studies</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="strategy">
+            <h3>AI Readiness Assessment Framework</h3>
+            <div class="article-meta">October 2025 • 6 min read • <span class="article-category">Strategy</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="governance">
+            <h3>GDPR and AI Compliance</h3>
+            <div class="article-meta">September 2025 • 7 min read • <span class="article-category">Governance</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="automation">
+            <h3>RPA vs. AI: When to Use Each</h3>
+            <div class="article-meta">August 2025 • 5 min read • <span class="article-category">Automation</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="ai-foundations">
+            <h3>Large Language Models Explained</h3>
+            <div class="article-meta">July 2025 • 9 min read • <span class="article-category">AI Foundations</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="case-studies">
+            <h3>How We Scaled AI Across 10,000 Users</h3>
+            <div class="article-meta">June 2025 • 12 min read • <span class="article-category">Case Studies</span></div>
+        </article>
+        
+        <article class="article-item show" data-category="buyers-guide">
+            <h3>The Complete AI Budget Guide</h3>
+            <div class="article-meta">May 2025 • 8 min read • <span class="article-category">Buyer's Guide</span></div>
+        </article>
+    </section>
+    
+    <script>
+        function filterCategory(category) {
+            const articles = document.querySelectorAll('.article-item');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            articles.forEach(article => {
+                if (category === 'all' || article.dataset.category === category) {
+                    article.classList.add('show');
+                } else {
+                    article.classList.remove('show');
+                }
+            });
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2026 Utilis Technologies. All rights reserved.</p>
+    </footer>
+</body>
+</html>
