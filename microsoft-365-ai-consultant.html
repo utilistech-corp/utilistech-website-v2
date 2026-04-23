@@ -1,469 +1,656 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft 365 Copilot Consulting Services | Utilis Technologies</title>
-    <meta name="description" content="Expert Microsoft 365 Copilot consulting services for UK enterprises. Readiness assessments, data governance, sensitivity labelling, and custom AI implementation.">
-    <meta name="author" content="Utilis Technologies">
-    <meta name="keywords" content="Microsoft 365, Copilot, AI consulting, data governance, UK">
-    
-    <style>
-        :root {
-            --primary: #0078d4;
-            --primary-dark: #005a9e;
-            --secondary: #50e6ff;
-            --text-dark: #1f1f1f;
-            --text-light: #5e5e5e;
-            --bg-light: #f7f7f7;
-            --border: #e1e1e1;
-            --success: #107c10;
-            --warning: #ffb900;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: #fff;
-        }
-        
-        /* Header Navigation */
-        header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--primary);
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: #fff;
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-        
-        /* Article Layout */
-        article {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .article-body {
-            line-height: 1.8;
-        }
-        
-        .article-body h2 {
-            font-size: 1.75rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .article-body h3 {
-            font-size: 1.25rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-        }
-        
-        .article-body p {
-            margin-bottom: 1rem;
-            color: var(--text-light);
-        }
-        
-        .article-body ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .article-body li {
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-        }
-        
-        /* Sidebar */
-        aside {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            height: fit-content;
-            position: sticky;
-            top: 100px;
-        }
-        
-        aside h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        aside p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-button:hover {
-            background: var(--primary-dark);
-        }
-        
-        .highlight-box {
-            background: #e3f2fd;
-            padding: 1rem;
-            border-left: 4px solid var(--primary);
-            margin: 1.5rem 0;
-            border-radius: 4px;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            margin-top: 3rem;
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        
-        .faq h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            color: var(--text-dark);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-        }
-        
-        .faq-question:hover {
-            color: var(--primary);
-        }
-        
-        .faq-answer {
-            margin-top: 0.75rem;
-            color: var(--text-light);
-            display: none;
-        }
-        
-        .faq-answer.active {
-            display: block;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            article {
-                grid-template-columns: 1fr;
-            }
-            
-            aside {
-                position: static;
-            }
-            
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-        }
-        
-        footer {
-            background: var(--text-dark);
-            color: #fff;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-    </style>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FHB95D4ZB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5FHB95D4ZB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Microsoft 365 Copilot Consultant | Utilis Technologies</title>
+<meta name="description" content="UK Microsoft 365 Copilot consultant. Readiness, deployment, governance and custom AI tools for Outlook, Teams and SharePoint — for UK SMEs.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="UK Microsoft 365 Copilot Consultant — Utilis Technologies">
+<meta property="og:description" content="UK Microsoft 365 Copilot consultant. Readiness, deployment, governance and custom AI tools for Outlook, Teams and SharePoint — for UK SMEs.">
+<meta property="og:url" content="https://utilistech.co.uk/microsoft-365-ai-consultant.html">
+<meta property="og:site_name" content="Utilis Technologies">
+
+<link rel="canonical" href="https://utilistech.co.uk/microsoft-365-ai-consultant.html">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- GSAP for advanced animations -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style-v3.css">
+<style>
+.article-hero {
+  position: relative; z-index: 1;
+  padding: clamp(var(--space-24), 12vw, var(--space-32)) var(--space-8) var(--space-8);
+  max-width: 720px; margin: 0 auto;
+}
+.article-hero .section-label { text-align: left; }
+.article-hero__back {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  margin-bottom: var(--space-8); transition: color 0.2s;
+}
+.article-hero__back:hover { color: var(--color-text-muted); }
+.article-hero__back .material-symbols-outlined { font-size: 18px; }
+.article-hero__title {
+  font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+  color: var(--color-text); line-height: 1.1; margin-bottom: var(--space-6);
+}
+.article-hero__meta {
+  display: flex; align-items: center; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-divider);
+}
+.article-hero__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--color-text-faint); }
+
+/* Article prose */
+.article {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: var(--space-10) var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article h2 {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin: var(--space-12) 0 var(--space-4); letter-spacing: -0.02em;
+}
+.article h3 {
+  font-family: var(--font-display); font-size: var(--text-lg); font-weight: 600;
+  color: var(--color-text); margin: var(--space-8) 0 var(--space-3);
+}
+.article p {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+.article strong { color: var(--color-text); font-weight: 600; }
+.article em { color: var(--color-text-muted); font-style: italic; }
+.article ul, .article ol {
+  margin: 0 0 var(--space-6) 0; padding: 0; list-style: none;
+}
+.article ul li, .article ol li {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;
+  border-bottom: 1px solid var(--color-divider);
+}
+.article ul li:first-child, .article ol li:first-child { border-top: 1px solid var(--color-divider); }
+.article ul li::before {
+  content: '\2192'; position: absolute; left: 0; color: var(--color-accent);
+  font-size: var(--text-sm); top: var(--space-2);
+}
+.article ol { counter-reset: ol-counter; }
+.article ol li { counter-increment: ol-counter; }
+.article ol li::before {
+  content: counter(ol-counter) '.'; position: absolute; left: 0; color: var(--color-accent);
+  font-size: var(--text-sm); font-weight: 600; top: var(--space-2);
+}
+.article blockquote {
+  background: var(--color-surface-2); border: 1px solid rgba(66, 222, 195, 0.2);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8); margin: var(--space-8) 0;
+}
+.article blockquote p { margin-bottom: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+.article a { color: var(--color-accent); }
+.article a:hover { text-decoration: underline; }
+
+/* Highlight card (matches roi-card pattern) */
+.roi-card {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-8); margin: var(--space-8) 0;
+}
+.roi-card p { font-size: var(--text-sm); margin-bottom: var(--space-3); }
+.roi-card p:last-child { margin-bottom: 0; }
+
+/* FAQ Section matching site style */
+.article-faq {
+  margin: var(--space-12) 0;
+}
+.article-faq__grid {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--color-divider); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); overflow: hidden;
+}
+.article-faq__item { background: var(--color-surface); overflow: hidden; }
+.article-faq__question {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-6) var(--space-8); background: none; border: none; cursor: pointer;
+  text-align: left; font-family: var(--font-display); font-size: var(--text-base);
+  font-weight: 600; color: var(--color-text); transition: background 0.3s var(--ease-out);
+  gap: var(--space-4);
+}
+.article-faq__question:hover { background: var(--color-surface-2); }
+.article-faq__icon {
+  color: var(--color-accent); font-size: 20px; flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out);
+}
+.article-faq__item.active .article-faq__icon { transform: rotate(180deg); }
+.article-faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-out); }
+.article-faq__answer-inner {
+  padding: 0 var(--space-8) var(--space-6);
+  font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75;
+}
+.article-faq__item.active .article-faq__answer { max-height: 500px; }
+
+/* Article CTA */
+.article-cta {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: 0 var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article-cta__box {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-10); text-align: center;
+}
+.article-cta__title {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin-bottom: var(--space-3);
+}
+.article-cta__text { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .article-faq__question { padding: var(--space-4) var(--space-6); font-size: var(--text-sm); }
+  .article-faq__answer-inner { padding: 0 var(--space-6) var(--space-4); }
+}
+</style>
+
+<!-- Service schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Microsoft 365 AI Integration Consulting",
+  "name": "UK Microsoft 365 Copilot & AI Integration Consulting",
+  "description": "UK-based consulting service for Microsoft 365 Copilot readiness, deployment, governance, and bespoke AI integrations across Outlook, Teams, SharePoint and OneDrive.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Utilis Technologies",
+    "alternateName": "UtilisTech",
+    "url": "https://utilistech.co.uk/",
+    "founder": {
+      "@type": "Person",
+      "name": "Dean Kewley",
+      "url": "https://utilistech.co.uk/dean-kewley.html"
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "UK SMEs using Microsoft 365"
+  },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "GBP"
+  }
+}
+</script>
+
+<!-- FAQ schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a Microsoft 365 AI integration consultant do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Microsoft 365 AI integration consultant helps organisations assess readiness for Copilot, configure licensing and data governance, deploy Copilot across Outlook, Teams and SharePoint, and build custom AI tools using the Microsoft Graph, Power Platform and Azure OpenAI where Copilot alone isn't sufficient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Microsoft 365 Copilot Premium worth it for a UK SME in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Post-15 April 2026, full in-app Copilot requires a paid Microsoft 365 Copilot (Premium) licence at around £24.70 per user per month in the UK. It is typically worth that cost for staff who spend significant time in Outlook, Word, Excel and Teams, where SharePoint is well-organised and Purview sensitivity labels are in place. Where data hygiene is poor, or where only a small number of users genuinely need it, a readiness project or targeted custom AI tool is usually a better first step than rolling Premium out to everyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What changed on 15 April 2026 for Microsoft 365 Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 15 April 2026, Microsoft restricted Copilot Chat inside Word, Excel, PowerPoint and OneNote for users on the free Copilot Chat tier. Full in-app Copilot now requires a paid Microsoft 365 Copilot (Premium) licence. For many UK SMEs this has forced a re-evaluation of who actually needs Premium, and whether a targeted custom automation would deliver more value than scaling paid licences to the whole team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I choose between OpenAI and Claude inside Microsoft 365 Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As of April 2026, Microsoft 365 Copilot Premium lets you choose between OpenAI models and Anthropic's Claude Opus 4.6 on a per-task basis — not as a tenant-wide switch. The choice changes the tone and reasoning quality of outputs but not what Copilot can do, which is still bounded by the Microsoft Graph and the apps Copilot sits inside."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Copilot deployment take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical UK SME Copilot deployment runs 4-8 weeks: readiness assessment (1-2 weeks), data governance and sensitivity labelling (1-3 weeks), pilot group rollout (1 week), and full rollout with training (1-2 weeks)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Microsoft 365 Copilot and a custom AI tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copilot is a licensed add-on that works inside existing Microsoft apps using your tenant's data. A custom AI tool built on Azure OpenAI, the Microsoft Graph or Claude is purpose-built for a specific workflow such as contract triage or compliance review, and often costs less per user while solving a narrower problem better."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Utilis</a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <div class="hero">
-            <h1>Microsoft 365 Copilot Consulting</h1>
-            <p>Expert guidance for enterprise AI adoption and governance</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-blueprint" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h4"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/></symbol>
+    <symbol id="i-apps" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 21V4"/><path d="M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 18 9 5 9-5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.7-9.9A6 6 0 0 1 18 9a4 4 0 0 1 0 9H7Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-11"/></symbol>
+    <symbol id="i-gavel" viewBox="0 0 24 24"><path d="m14 10-5 5M9 7l8 8M5 19l4-4M16 4l4 4M14 6l4 4M3 21h10"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M12 8.5v3M10 13l-3 3M14 13l3 3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h2l2 5-3 2a12 12 0 0 0 7 7l2-3 5 2v2a2 2 0 0 1-2 2A16 16 0 0 1 4 5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 17v-7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="7" r="2.5"/><path d="M15 14a5 5 0 0 1 6 5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  </defs>
+</svg>
+<canvas id="ember-canvas"></canvas>
+
+<header class="nav" id="nav">
+  <a href="/index.html" class="nav__logo">
+    <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+    <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Main navigation">
+    <a href="/index.html" class="nav__link">Home</a>
+    <a href="/solutions.html" class="nav__link nav__link--active">Solutions</a>
+    <a href="/how-we-work.html" class="nav__link">How We Work</a>
+    <a href="/about.html" class="nav__link">About</a>
+    <a href="/infrastructure.html" class="nav__link">Infrastructure</a>
+    <a href="/blog.html" class="nav__link">Blog</a>
+    <a href="/contact.html" class="nav__link">Contact</a>
+  </nav>
+  <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--sm nav__cta-desktop" target="_blank" rel="noopener noreferrer">
+    <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+  <div class="nav__mobile-menu">
+    <a href="/index.html" class="nav__mobile-link">Home</a>
+    <a href="/solutions.html" class="nav__mobile-link">Solutions</a>
+    <a href="/how-we-work.html" class="nav__mobile-link">How We Work</a>
+    <a href="/about.html" class="nav__mobile-link">About</a>
+    <a href="/infrastructure.html" class="nav__mobile-link">Infrastructure</a>
+    <a href="/blog.html" class="nav__mobile-link">Blog</a>
+    <a href="/contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--md nav__mobile-cta" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== ARTICLE HERO ===== -->
+<section class="article-hero">
+  <a href="/solutions.html" class="article-hero__back">
+    <svg class="icon"><use href="#i-arrow-right"/></svg> Back to Solutions
+  </a>
+  <span class="section-label">SERVICES</span>
+  <h1 class="article-hero__title">UK Microsoft 365 Copilot Consultant</h1>
+  <div class="article-hero__meta">
+    <span>Microsoft 365 &amp; AI Integration</span>
+    <span class="article-hero__dot"></span>
+    <span>UK SMEs</span>
+    <span class="article-hero__dot"></span>
+    <span>Updated 16 April 2026</span>
+  </div>
+</section>
+
+<!-- ===== ARTICLE BODY ===== -->
+<div class="article">
+
+<p>Independent, UK-based consulting for Microsoft 365 Copilot readiness, deployment, and custom AI integrations &mdash; for SMEs that want Copilot to actually pay back, not just sit in a licence bill.</p>
+
+<p><em>Updated 16 April 2026 &mdash; since Microsoft's <strong>15 April 2026</strong> restriction of Copilot Chat in Word, Excel, PowerPoint and OneNote for non-Premium users, a lot of UK SMEs are re-evaluating their M365 AI stack. This page reflects the post-15-April reality: paid <strong>Microsoft 365 Copilot (Premium)</strong> at roughly &pound;24.70 per user per month, per-task model choice between OpenAI and Anthropic's <strong>Claude Opus 4.6</strong>, and the Researcher agent's new PowerPoint / PDF / infographic / audio output formats.</em></p>
+
+<h2>What a Microsoft 365 AI integration consultant actually does</h2>
+
+<p>Most "AI consultants" chasing UK SMEs are generalists who pitch Copilot as a drop-in button. In practice, a Copilot rollout that delivers real hours-saved depends on three things that get skipped:</p>
+
+<ul>
+<li><strong>Data hygiene</strong> &mdash; Copilot grounds on whatever your users can already see. Sprawling SharePoint permissions leak data into prompts.</li>
+<li><strong>Sensitivity labelling</strong> &mdash; Without Purview labels, Copilot happily surfaces payroll spreadsheets to the sales team.</li>
+<li><strong>Use-case specificity</strong> &mdash; Generic prompts get generic value. Role-specific prompt libraries are where ROI shows up.</li>
+</ul>
+
+<p>Utilis Technologies (<strong>UtilisTech</strong>) works with UK SMEs (typically 20&ndash;250 staff) across the full Copilot journey: readiness audit, governance setup, pilot, rollout, and the bespoke AI tools that live alongside Copilot where Copilot alone won't cut it.</p>
+
+<h2>Post-15 April 2026: what's changed</h2>
+
+<p>From <strong>15 April 2026</strong>, Microsoft restricted Copilot Chat inside Word, Excel, PowerPoint and OneNote for users on the free Copilot Chat tier. Full in-app Copilot now requires a paid <strong>Microsoft 365 Copilot (Premium)</strong> licence &mdash; currently around &pound;24.70 per user per month in the UK. For SMEs whose AI strategy was "everyone gets Copilot Chat for free and we'll figure it out from there", that strategy stopped working this month.</p>
+
+<p>There are two shifts worth pricing into any 2026 M365 plan:</p>
+
+<ul>
+<li><strong>Per-task model choice.</strong> Copilot Premium now lets you choose between OpenAI models and Anthropic's <strong>Claude Opus 4.6</strong> on a per-task basis &mdash; not a tenant-wide switch. The choice changes the tone and reasoning quality of outputs, but not what Copilot can <em>do</em>; that's still bounded by the Microsoft Graph and the apps Copilot sits inside.</li>
+<li><strong>Researcher agent outputs.</strong> Copilot's Researcher agent now exports findings as PowerPoint decks, PDFs, infographics or audio briefings &mdash; not just text. Useful if you're presenting research upwards; worth factoring into any Copilot business case.</li>
+</ul>
+
+<p>The honest question after 15 April is: are you getting value from Copilot, or did you think you were because it lit up in Office? If it's the latter, a targeted custom automation usually beats scaling Premium licences to the whole team.</p>
+
+<h2>What's included</h2>
+
+<h3>1. Copilot Readiness Assessment</h3>
+
+<p>A structured 1&ndash;2 week review of whether Copilot will return value in your tenant today. Covers licensing, Entra ID and Conditional Access posture, SharePoint/OneDrive data sprawl, sensitivity labelling, eligible user roles, and expected hours saved per role. Output: a go/no-go recommendation with a costed remediation plan.</p>
+
+<h3>2. Data Governance &amp; Sensitivity Labelling</h3>
+
+<p>Purview sensitivity labels deployed across Exchange, SharePoint and Teams. DLP policies aligned to UK GDPR and your sector's regulatory posture (e.g. FCA, ICO, MHRA). We deliberately ship a <em>minimum viable</em> labelling taxonomy &mdash; three to five labels, not thirty.</p>
+
+<h3>3. Pilot &amp; Role-Specific Prompt Libraries</h3>
+
+<p>Copilot rolled out to a pilot group (typically Sales, Finance and Operations leads) with role-specific prompt libraries, measurable KPIs, and a feedback loop. We'd rather prove it works for 10 people before licensing 100.</p>
+
+<h3>4. Custom AI Tools Where Copilot Falls Short</h3>
+
+<p>Copilot is the right answer for roughly 70% of horizontal knowledge-work tasks. For the rest &mdash; contract triage, customer email classification, structured data extraction from PDFs &mdash; a purpose-built tool on the Microsoft Graph, Power Platform or Claude API is usually cheaper and better. We build those.</p>
+
+<h3>5. Governance &amp; Acceptable Use Policy</h3>
+
+<p>Drafted AI usage policy, staff training materials, and an internal Copilot champions programme &mdash; so the rollout doesn't stall two weeks after go-live.</p>
+
+<h3>6. AI Growth Lab &mdash; try before you commit</h3>
+
+<p>Since the 15 April Copilot Chat change, more SMEs are reluctant to sign up for a year of Premium licences without knowing whether the tool actually fits their work. That's where the <strong>AI Growth Lab</strong> comes in: a low-risk sandbox where we take one real process from your business &mdash; invoice handling, contract review, email triage, meeting follow-ups &mdash; and build a working automation in your tenant for a fixed fee. You see it running on your actual data, with your team. No annual commitment, no platform lock-in. If it works, you scale it. If it doesn't, you've learned what doesn't fit before buying licences for 30 people.</p>
+
+<blockquote>
+<p><strong>Why UK-specific matters:</strong> Most Microsoft 365 Copilot content ranking in Google is written for US mid-market. UK SMEs have different licensing SKUs (Business Standard/Premium vs E3/E5), different data residency expectations, and UK GDPR / ICO commitments that change how governance is configured. A UK consultant skips the translation step.</p>
+</blockquote>
+
+<h2>Copilot readiness checklist</h2>
+
+<p>Before you buy Copilot licences, walk through this. If you can tick 7+ of 10, you're ready. If you can't, a readiness project will pay for itself.</p>
+
+<ul>
+<li><strong>Licensing:</strong> you're on Microsoft 365 Business Standard/Premium or E3/E5, and you've identified who actually needs a paid <strong>Microsoft 365 Copilot (Premium)</strong> licence at ~&pound;24.70 per user per month (post-15 April 2026, the free Copilot Chat tier no longer covers Word, Excel, PowerPoint or OneNote)</li>
+<li><strong>Entra ID:</strong> all users authenticate through Entra ID with MFA enforced via Conditional Access</li>
+<li><strong>SharePoint permissions:</strong> you've run a recent "oversharing" report and closed the obvious holes</li>
+<li><strong>Sensitivity labels:</strong> at least three Purview sensitivity labels are deployed and applied by default</li>
+<li><strong>Data Loss Prevention:</strong> baseline DLP policies exist for UK GDPR personal data</li>
+<li><strong>Teams governance:</strong> Teams creation policy is defined (not a free-for-all)</li>
+<li><strong>User readiness:</strong> target users already live in Outlook, Word, Excel and Teams daily</li>
+<li><strong>Hours-saved hypothesis:</strong> you can name the three workflows you expect Copilot to compress</li>
+<li><strong>Pilot group identified:</strong> 5&ndash;15 users across at least two functions</li>
+<li><strong>Acceptable Use Policy:</strong> you have &mdash; or are ready to adopt &mdash; a written AI usage policy for staff</li>
+</ul>
+
+<h2>Typical engagement</h2>
+
+<p>Four to eight weeks end-to-end for a typical UK SME:</p>
+
+<ol>
+<li><strong>Week 1&ndash;2 &mdash; Readiness.</strong> Tenant audit, data governance review, costed go/no-go recommendation.</li>
+<li><strong>Week 2&ndash;4 &mdash; Governance.</strong> Sensitivity labels, DLP baselines, Acceptable Use Policy, Conditional Access review.</li>
+<li><strong>Week 4&ndash;5 &mdash; Pilot.</strong> 5&ndash;15 user pilot group, role-specific prompt libraries, KPI baseline.</li>
+<li><strong>Week 5&ndash;8 &mdash; Rollout &amp; training.</strong> Full rollout, champions programme, measurable hours-saved reporting.</li>
+</ol>
+
+<h2>Sectors we work with</h2>
+
+<p>Utilis Technologies focuses on UK SMEs in professional services, financial services, healthcare, and light manufacturing &mdash; sectors where Copilot's knowledge-work gains are concrete and where governance around personal or regulated data matters. If you're in construction, property or legal, we've done the work.</p>
+
+<blockquote>
+<p><strong>Related reading:</strong> our longer-form posts on <a href="/blog-2-copilot-vs-custom.html">Copilot vs custom AI tools (updated post-15 April)</a> and <a href="/blog-6-ai-awareness.html">why most businesses are underusing AI</a> go deeper into the trade-offs behind Premium licensing, per-task model choice, and when a custom build beats an off-the-shelf subscription.</p>
+</blockquote>
+
+<h2>FAQ</h2>
+
+<div class="article-faq">
+  <div class="article-faq__grid">
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What does a Microsoft 365 AI integration consultant do?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Assesses Copilot readiness, configures licensing and governance, deploys Copilot across Outlook, Teams and SharePoint, and builds custom AI tools on the Microsoft Graph, Power Platform or Azure OpenAI where Copilot alone isn't sufficient.
         </div>
-        
-        <article>
-            <div class="article-body">
-                <h2>Transform Your Workplace with Microsoft 365 Copilot</h2>
-                <p>Microsoft 365 Copilot represents a fundamental shift in how enterprises can leverage AI to enhance productivity, automate routine tasks, and unlock insights from organizational data. As a leading UK-based Microsoft 365 consulting partner, Utilis Technologies helps organizations navigate the complexities of Copilot implementation, data governance, and responsible AI adoption.</p>
-                
-                <h3>What is Microsoft 365 Copilot?</h3>
-                <p>Microsoft 365 Copilot is an integrated AI assistant that works across Microsoft 365 applications including Word, Excel, PowerPoint, Outlook, and Teams. Powered by large language models and your organization's data and context, Copilot assists users with writing, analysis, research, and collaboration tasks.</p>
-                
-                <div class="highlight-box">
-                    <strong>Recent Update (16 April 2026):</strong> Microsoft has implemented new restrictions on Copilot Chat functionality and adjusted licensing models. Premium features now require approximately £24.70 per user per month. Users can now select Claude Opus 4.6 for specific per-task use cases, and Researcher agent outputs have been refined for enhanced accuracy.
-                </div>
-                
-                <h3>Readiness Assessment</h3>
-                <p>Before deploying Copilot across your organization, a comprehensive readiness assessment is essential. Our consulting team evaluates:</p>
-                <ul>
-                    <li>Current Microsoft 365 maturity and user adoption levels</li>
-                    <li>Data governance frameworks and information architecture</li>
-                    <li>Security and compliance requirements</li>
-                    <li>User readiness and training needs</li>
-                    <li>Organizational culture and change management capacity</li>
-                </ul>
-                
-                <h3>Data Governance & Security</h3>
-                <p>Successful Copilot implementation depends on robust data governance. Utilis Technologies helps establish:</p>
-                <ul>
-                    <li><strong>Data Classification Frameworks:</strong> Categorizing content by sensitivity level to ensure Copilot operates appropriately</li>
-                    <li><strong>Sensitivity Labelling:</strong> Implementing Microsoft Purview Information Protection to automatically classify and protect sensitive content</li>
-                    <li><strong>Access Controls:</strong> Defining who can use Copilot and what data Copilot can access</li>
-                    <li><strong>Compliance Mapping:</strong> Ensuring Copilot use aligns with GDPR, UK data protection regulations, and industry-specific requirements</li>
-                    <li><strong>Audit and Monitoring:</strong> Setting up logging and analytics to track Copilot usage and identify potential risks</li>
-                </ul>
-                
-                <h3>Custom AI Tools & Integration</h3>
-                <p>Beyond standard Copilot capabilities, organizations can develop custom AI tools that integrate with Microsoft 365:</p>
-                <ul>
-                    <li><strong>Prompt Engineering:</strong> Crafting effective prompts for specific business processes</li>
-                    <li><strong>Custom Plugins:</strong> Building bespoke integrations with line-of-business applications</li>
-                    <li><strong>Workflow Automation:</strong> Using Copilot with Power Automate to automate complex business processes</li>
-                    <li><strong>Analytics & Insights:</strong> Leveraging Copilot with Power BI for advanced data analysis and visualization</li>
-                </ul>
-                
-                <h3>Change Management & Training</h3>
-                <p>Technology adoption succeeds only when people embrace it. We provide:</p>
-                <ul>
-                    <li>Executive briefings on Copilot capabilities and business value</li>
-                    <li>Department-specific training tailored to job functions</li>
-                    <li>Best practices documentation and style guides</li>
-                    <li>Ongoing support and community-building initiatives</li>
-                    <li>Measurement frameworks to track adoption and ROI</li>
-                </ul>
-                
-                <h3>Why Partner with Utilis Technologies?</h3>
-                <p>Utilis Technologies brings deep expertise in Microsoft 365, enterprise AI governance, and organizational transformation. Our team has guided dozens of UK organizations through successful Copilot deployments, managing complex data governance challenges, regulatory compliance, and cultural change. We understand the unique regulatory landscape in the UK and can help your organization navigate data protection and responsible AI requirements with confidence.</p>
-                
-                <!-- FAQ Section -->
-                <div class="faq">
-                    <h2>Frequently Asked Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What data does Copilot have access to?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Copilot can access data within your Microsoft 365 tenant that the logged-in user has permission to access. This includes emails, documents, chat messages, and collaborative content. Your data stays within your tenant and is not used to train Microsoft's models. We help configure sensitivity labels to control what Copilot can see.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Is Copilot compliant with UK data protection laws?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Microsoft 365 Copilot is designed to comply with GDPR and UK data protection requirements when properly configured. Your data remains within your tenant, and you maintain control over access and retention policies. We audit configurations to ensure compliance with your specific regulatory obligations.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What are the licensing costs for Copilot?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Standard Microsoft 365 licenses include basic Copilot functionality. Premium Copilot Chat features are available at approximately £24.70 per user per month. Enterprise agreements may offer different pricing structures. We help you understand licensing options and calculate total cost of ownership for your organization.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Can we use different AI models with Copilot?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Microsoft 365 Copilot uses multiple large language models. Users can now select Claude Opus 4.6 for specific per-task use cases alongside Copilot's default models. This flexibility allows organizations to choose the best model for each business scenario while maintaining governance and security.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How do we measure Copilot ROI?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            We establish measurement frameworks focusing on time saved, quality improvements, and user satisfaction. Common metrics include: reduction in time spent on routine tasks, improved document quality, increased collaboration, and user adoption rates. We integrate these metrics into your existing business intelligence systems.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What happens if our data contains sensitive information?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Sensitivity labelling and data classification are core components of our implementation approach. We help classify content by sensitivity level and configure Copilot policies to prevent it from accessing or processing highly sensitive data. This ensures Copilot enhances productivity while maintaining security.
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How long does a typical implementation take?</span>
-                            <span>▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            Timeline varies based on organizational size and complexity. A typical implementation includes: 2-4 weeks for readiness assessment, 4-6 weeks for governance setup and pilot, and 6-8 weeks for phased rollout. We develop a customized timeline during the initial consulting engagement.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <aside>
-                <h3>Get Started Today</h3>
-                <p>Our Copilot consulting experts are ready to help your organization navigate AI adoption with confidence.</p>
-                <a href="https://calendly.com/dean-kewley/30min" class="cta-button">Book a Consultation</a>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 1rem;">
-                    <strong>Last Updated:</strong> 16 April 2026
-                </p>
-                <p style="font-size: 0.85rem; color: var(--text-light);">
-                    <strong>Contact:</strong> dean@utilistech.co.uk
-                </p>
-            </aside>
-        </article>
+      </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2026 Utilis Technologies. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">
-            <em>Perplexity Computer attribution</em>
-        </p>
-    </footer>
-    
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FHB95D4ZB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-5FHB95D4ZB');
-    </script>
-    
-    <!-- Calendly Widget -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    
-    <!-- Chatbot Integration -->
-    <script>
-        // FAQ Accordion Functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.classList.toggle('active');
-            });
-        });
-    </script>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Is Microsoft 365 Copilot Premium worth it for a UK SME in 2026?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Post-15 April 2026, full in-app Copilot requires a paid Microsoft 365 Copilot (Premium) licence at around &pound;24.70 per user per month in the UK. Typically worth it for staff who spend significant time in Outlook, Word, Excel and Teams, where SharePoint is well-organised and sensitivity labels are in place. Where data hygiene is poor &mdash; or where only a small number of users need it &mdash; a readiness project or targeted custom AI tool is usually a better first step than scaling Premium licences to everyone.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What changed on 15 April 2026 for Microsoft 365 Copilot?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          From 15 April 2026, Microsoft restricted Copilot Chat inside Word, Excel, PowerPoint and OneNote for users on the free Copilot Chat tier. Full in-app Copilot now requires a paid Microsoft 365 Copilot (Premium) licence. The change has forced many UK SMEs to re-evaluate who actually needs Premium &mdash; and whether a targeted custom automation would deliver more value than rolling paid licences out to the whole team.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Can I choose between OpenAI and Claude inside Microsoft 365 Copilot?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Yes. As of April 2026, Microsoft 365 Copilot Premium lets you choose between OpenAI models and Anthropic's Claude Opus 4.6 on a per-task basis &mdash; not a tenant-wide switch. The choice changes the tone and reasoning quality of outputs but not what Copilot can <em>do</em>, which is still bounded by the Microsoft Graph and the apps Copilot sits inside.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        How long does a Copilot deployment take?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Four to eight weeks end-to-end for a typical UK SME: readiness (1&ndash;2 weeks), governance (1&ndash;3 weeks), pilot (1 week), and full rollout with training (1&ndash;2 weeks).
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What's the difference between Copilot and a custom AI tool?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Copilot is a licensed add-on that works inside Microsoft apps using tenant data. A custom tool &mdash; on Azure OpenAI, the Microsoft Graph or the Claude API &mdash; is purpose-built for a specific workflow, often cheaper per user, and usually solves a narrower problem better.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Do we need to be fully in Microsoft 365 already?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Yes for Copilot itself &mdash; it requires a qualifying Microsoft 365 Business or Enterprise licence. For custom AI tooling, no: we work with mixed estates (Google Workspace, on-prem file shares, third-party CRMs) and integrate via APIs where needed.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Who are you?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Utilis Technologies (UtilisTech) is a UK AI integration consultancy founded by <a href="/dean-kewley.html">Dean Kewley</a>, an IT consultant with a background in Microsoft 365, Azure, and IT security. We work with UK SMEs across the full Copilot journey and on custom AI tooling where Copilot alone falls short.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Next step</h2>
+
+<p>The fastest way to find out whether Copilot will pay back for your team is a 30-minute readiness call. No slides, no pitch &mdash; we walk through your tenant state, your top three candidate workflows, and whether readiness, Copilot, or a custom build is the right first move.</p>
+
+<p><strong>Related reading:</strong> <a href="/blog-2-copilot-vs-custom.html">Copilot vs Custom AI Tools</a> &middot; <a href="/blog-5-ai-readiness.html">AI Readiness Assessment</a> &middot; <a href="/blog-4-ai-policy.html">AI Usage Policy for UK SMEs</a> &middot; <a href="/blog-6-ai-awareness.html">You don't need AI &mdash; you need to stop wasting time</a></p>
+
+</div>
+
+<!-- ===== ARTICLE CTA ===== -->
+<section class="article-cta">
+  <div class="article-cta__box">
+    <h3 class="article-cta__title">Make Copilot pay back. Or don't buy it yet.</h3>
+    <p class="article-cta__text">Book a 30-minute readiness call. We'll walk through your tenant, your top three candidate workflows, and whether readiness, Copilot, or a custom build is the right first move.</p>
+    <a href="https://calendly.com/contact-utilistech/30min" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap">
+        <span class="btn__text">Book a Readiness Call</span>
+        <span class="btn__text-clone" aria-hidden="true">Book a Readiness Call</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/index.html" class="nav__logo">
+        <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+        <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+      </a>
+      <p class="footer__tagline">Utilis Technologies (UtilisTech) &mdash; AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Services</h4>
+      <ul class="footer__col-links">
+        <li><a href="/solutions.html" class="footer__link">AI &amp; Automation</a></li>
+        <li><a href="/microsoft-365-ai-consultant.html" class="footer__link">M365 Copilot Consultant</a></li>
+        <li><a href="/how-we-work.html" class="footer__link">How We Work</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Company</h4>
+      <ul class="footer__col-links">
+        <li><a href="/about.html" class="footer__link">About</a></li>
+        <li><a href="/dean-kewley.html" class="footer__link">Dean Kewley</a></li>
+        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+        <li><a href="/privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Insights</h4>
+      <ul class="footer__col-links">
+        <li><a href="/blog.html" class="footer__link">Blog</a></li>
+        <li><a href="/infrastructure.html" class="footer__link">Infrastructure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</span>
+    <div class="footer__bottom-links">
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" class="footer__attribution">ICO Registration</a>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer__attribution">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js" defer></script>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.querySelectorAll('.article-faq__question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.article-faq__item').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.article-faq__question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isActive) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+<!-- Calendly Badge Widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-utilistech', text: 'Book a Call', color: '#42dec3', textColor: '#0A0F0F', branding: false }); }</script>
+
+<!-- Chatbot Widget -->
+<script src="/chatbot-widget.js" data-api-url="https://utilistech-chatbot-dwdqatbbhwcubvgx.uksouth-01.azurewebsites.net/api/chat" defer></script>
+
 </body>
 </html>
