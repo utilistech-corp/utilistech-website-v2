@@ -1,1 +1,306 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure Services - Utilis Technologies</title>
+    <meta name="description" content="Professional IT infrastructure consulting and management. Cloud services, Microsoft 365, networking, security, and backup solutions.">
+    <meta property="og:title" content="IT Infrastructure Services - Utilis Technologies">
+    <meta property="og:description" content="Professional IT infrastructure consulting and management services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.utilistech.co.uk/infrastructure">
+    <link rel="canonical" href="https://www.utilistech.co.uk/infrastructure">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        header a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .service-card:hover {
+            background: #e8e8e8;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .why-section {
+            background: #f9f9f9;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .why-section h2 {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .process-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .process-step {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+
+        .process-step h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header a {
+                margin: 0;
+            }
+
+            .services-grid, .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Utilis Technologies</a>
+            <div>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/how-we-work">How We Work</a>
+                <a href="/infrastructure">Infrastructure Services</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>IT Infrastructure Services</h1>
+            <p>Expert cloud, security, and infrastructure management to scale your business reliably.</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <h3>Cloud & Azure</h3>
+                <p>Design and manage scalable cloud infrastructure. From migration to optimization, we ensure your Azure environment runs efficiently.</p>
+            </div>
+            <div class="service-card">
+                <h3>Microsoft 365 & Identity</h3>
+                <p>Secure identity management, collaboration tools, and compliance. We set up and manage Microsoft 365 ecosystems.</p>
+            </div>
+            <div class="service-card">
+                <h3>Networking & Security</h3>
+                <p>Protect your network with modern security practices. Firewalls, VPNs, threat monitoring, and compliance frameworks.</p>
+            </div>
+            <div class="service-card">
+                <h3>Backup & Recovery</h3>
+                <p>Ensure business continuity with robust backup strategies. Fast recovery times and tested disaster recovery plans.</p>
+            </div>
+        </section>
+
+        <section class="why-section">
+            <h2>Why Infrastructure Matters</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto; color: #666;">
+                Your infrastructure is the backbone of your business. Poor planning leads to downtime, security risks, and lost productivity. 
+                We build infrastructure that scales, protects your data, and keeps your business running.
+            </p>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin: 3rem 0 2rem;">Our 4-Phase Process</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <h4>1. Audit</h4>
+                    <p>Assess your current infrastructure and identify gaps.</p>
+                </div>
+                <div class="process-step">
+                    <h4>2. Design</h4>
+                    <p>Create a scalable, secure blueprint tailored to your needs.</p>
+                </div>
+                <div class="process-step">
+                    <h4>3. Deploy</h4>
+                    <p>Implement changes with minimal disruption to operations.</p>
+                </div>
+                <div class="process-step">
+                    <h4>4. Support</h4>
+                    <p>Provide ongoing monitoring and optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Upgrade Your Infrastructure?</h2>
+            <p>Let's discuss your needs and build a plan that supports your growth.</p>
+            <a href="/contact" class="cta-button">Get in Touch</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Utilis Technologies. All rights reserved. <a href="/privacy-policy">Privacy Policy</a> | ICO Registration: ZA123456</p>
+    </footer>
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" async></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>
