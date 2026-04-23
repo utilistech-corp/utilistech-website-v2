@@ -1,128 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is your business ready for AI? A practical checklist | Utilistech</title>
-    <meta name="description" content="A practical checklist to evaluate your business readiness for AI implementation. Assess infrastructure, skills, data quality, and organizational factors.">
-    <meta name="author" content="Utilistech">
-    <meta name="publish_date" content="2026-03-15">
-    <meta name="update_date" content="2026-04-12">
-    <meta name="category" content="AI Strategy">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FHB95D4ZB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5FHB95D4ZB');
+</script>
+
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is your business ready for AI? A practical checklist — Utilis Technologies</title>
+<meta name="description" content="What separates businesses that successfully adopt AI from those that struggle? Here's what you need to sort out first.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is your business ready for AI? A practical checklist — Utilis Technologies">
+<meta property="og:description" content="What separates businesses that successfully adopt AI from those that struggle? Here's what you need to sort out first.">
+<meta property="og:url" content="https://utilistech.co.uk/blog-5-ai-readiness.html">
+<meta property="og:site_name" content="Utilis Technologies">
+
+<link rel="canonical" href="https://utilistech.co.uk/blog-5-ai-readiness.html">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- GSAP for advanced animations -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style-v3.css">
+<style>
+.article-hero {
+  position: relative; z-index: 1;
+  padding: clamp(var(--space-24), 12vw, var(--space-32)) var(--space-8) var(--space-8);
+  max-width: 720px; margin: 0 auto;
+}
+.article-hero .section-label { text-align: left; }
+.article-hero__back {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  margin-bottom: var(--space-8); transition: color 0.2s;
+}
+.article-hero__back:hover { color: var(--color-text-muted); }
+.article-hero__back .material-symbols-outlined { font-size: 18px; }
+.article-hero__title {
+  font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+  color: var(--color-text); line-height: 1.1; margin-bottom: var(--space-6);
+}
+.article-hero__meta {
+  display: flex; align-items: center; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-divider);
+}
+.article-hero__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--color-text-faint); }
+
+/* Article prose */
+.article {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: var(--space-10) var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article h2 {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin: var(--space-12) 0 var(--space-4); letter-spacing: -0.02em;
+}
+.article h3 {
+  font-family: var(--font-display); font-size: var(--text-lg); font-weight: 600;
+  color: var(--color-text); margin: var(--space-8) 0 var(--space-3);
+}
+.article p {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+.article strong { color: var(--color-text); font-weight: 600; }
+.article ul, .article ol {
+  margin: 0 0 var(--space-6) 0; padding: 0; list-style: none;
+}
+.article ul li, .article ol li {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;
+  border-bottom: 1px solid var(--color-divider);
+}
+.article ul li:first-child, .article ol li:first-child { border-top: 1px solid var(--color-divider); }
+.article ul li::before {
+  content: '→'; position: absolute; left: 0; color: var(--color-accent);
+  font-size: var(--text-sm); top: var(--space-2);
+}
+.article blockquote {
+  background: var(--color-surface-2); border: 1px solid rgba(66, 222, 195, 0.2);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8); margin: var(--space-8) 0;
+}
+.article blockquote p { margin-bottom: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+.article a { color: var(--color-accent); }
+.article a:hover { text-decoration: underline; }
+
+/* Comparison table */
+.article table {
+  width: 100%; border-collapse: collapse; margin: var(--space-8) 0;
+  border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-card-border);
+}
+.article th {
+  background: var(--color-surface-2); font-family: var(--font-display);
+  font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-text-muted); padding: var(--space-4) var(--space-5); text-align: left;
+  border-bottom: 1px solid var(--color-card-border);
+}
+.article td {
+  padding: var(--space-4) var(--space-5); font-size: var(--text-sm);
+  color: var(--color-text-muted); border-bottom: 1px solid var(--color-divider);
+  vertical-align: top; line-height: 1.6;
+}
+.article tr:last-child td { border-bottom: none; }
+.win-custom { color: var(--color-accent); font-weight: 600; font-size: var(--text-xs); }
+.win-shelf { color: #a4c9ff; font-weight: 600; font-size: var(--text-xs); }
+
+/* Process cards for blog-3 */
+.process-card {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-8); margin: var(--space-6) 0;
+  transition: border-color 0.3s;
+}
+.process-card:hover { border-color: rgba(66, 222, 195, 0.35); }
+.process-card__num {
+  font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+  color: var(--color-accent); opacity: 0.25; line-height: 1; margin-bottom: var(--space-3);
+}
+.process-card h3 { margin-top: 0; }
+.process-card p { font-size: var(--text-sm); }
+.roi-badge {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); font-weight: 600; color: var(--color-accent);
+  background: rgba(66, 222, 195, 0.1); border: 1px solid rgba(66, 222, 195, 0.15);
+  padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); margin-top: var(--space-2);
+}
+
+/* Checklist for blog-5 */
+.checklist {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-8); margin: var(--space-8) 0;
+}
+.checklist-item {
+  display: flex; gap: var(--space-4); margin-bottom: var(--space-4);
+  font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6;
+}
+.checklist-item:last-child { margin-bottom: 0; }
+.checklist-check {
+  min-width: 20px; width: 20px; height: 20px; border-radius: 4px;
+  border: 2px solid var(--color-accent); display: flex; align-items: center;
+  justify-content: center; margin-top: 2px; flex-shrink: 0;
+}
+.checklist-check::after { content: '✓'; font-size: 12px; color: var(--color-accent); font-weight: 600; }
+
+/* Stat block for blog-6 */
+.stat-block {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-8); margin: var(--space-8) 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); text-align: center;
+}
+.stat-block .stat-val {
+  font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+  color: var(--color-accent); letter-spacing: -0.02em;
+}
+.stat-block .stat-lbl { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-1); }
+
+/* Article CTA */
+.article-cta {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: 0 var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article-cta__box {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-10); text-align: center;
+}
+.article-cta__title {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin-bottom: var(--space-3);
+}
+.article-cta__text { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .stat-block { grid-template-columns: 1fr; }
+  .article table th, .article table td { padding: var(--space-3); font-size: var(--text-xs); }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Is your business ready for AI? A practical checklist",
+  "datePublished": "2026-03-05",
+  "dateModified": "2026-04-13",
+  "author": {"@type": "Person", "name": "Dean Kewley"},
+  "publisher": {"@type": "Organization", "name": "Utilis Technologies", "url": "https://utilistech.co.uk"},
+  "description": "What separates businesses that successfully adopt AI from those that struggle? Here's what you need to sort out first.",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://utilistech.co.uk/blog-5-ai-readiness.html"},
+  "creator": {"@type": "SoftwareApplication", "name": "Perplexity Computer", "url": "https://www.perplexity.ai/computer"}
+}
+</script>
 </head>
 <body>
-    <article>
-        <header>
-            <h1>Is your business ready for AI? A practical checklist</h1>
-            <p class="meta">Published March 15, 2026 | Updated April 12, 2026 | By Utilistech</p>
-        </header>
 
-        <section class="introduction">
-            <p>AI adoption is no longer a question of if, but when. Yet many organizations rush into AI initiatives without assessing their true readiness. This checklist helps you evaluate your business's foundational readiness across five critical dimensions.</p>
-        </section>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-blueprint" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h4"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/></symbol>
+    <symbol id="i-apps" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 21V4"/><path d="M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 18 9 5 9-5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.7-9.9A6 6 0 0 1 18 9a4 4 0 0 1 0 9H7Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-11"/></symbol>
+    <symbol id="i-gavel" viewBox="0 0 24 24"><path d="m14 10-5 5M9 7l8 8M5 19l4-4M16 4l4 4M14 6l4 4M3 21h10"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M12 8.5v3M10 13l-3 3M14 13l3 3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h2l2 5-3 2a12 12 0 0 0 7 7l2-3 5 2v2a2 2 0 0 1-2 2A16 16 0 0 1 4 5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 17v-7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="7" r="2.5"/><path d="M15 14a5 5 0 0 1 6 5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  </defs>
+</svg>
+<canvas id="ember-canvas"></canvas>
 
-        <section class="readiness-dimensions">
-            <h2>1. Infrastructure Readiness</h2>
-            <ul>
-                <li>Cloud infrastructure in place (AWS, Azure, or GCP)</li>
-                <li>Data storage systems (data lakes, data warehouses)</li>
-                <li>API integration capability across systems</li>
-                <li>Security frameworks compliant with AI requirements</li>
-                <li>Network bandwidth sufficient for AI workloads</li>
-            </ul>
+<header class="nav" id="nav">
+  <a href="/index.html" class="nav__logo">
+    <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+    <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Main navigation">
+    <a href="/index.html" class="nav__link">Home</a>
+    <a href="/solutions.html" class="nav__link">Solutions</a>
+    <a href="/how-we-work.html" class="nav__link">How We Work</a>
+    <a href="/about.html" class="nav__link">About</a>
+    <a href="/infrastructure.html" class="nav__link">Infrastructure</a>
+    <a href="/blog.html" class="nav__link nav__link--active">Blog</a>
+    <a href="/contact.html" class="nav__link">Contact</a>
+  </nav>
+  <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--sm nav__cta-desktop" target="_blank" rel="noopener noreferrer">
+    <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+  </a>
+  <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+</header>
+<input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+<div class="nav__mobile-menu">
+    <a href="/index.html" class="nav__mobile-link">Home</a>
+    <a href="/solutions.html" class="nav__mobile-link">Solutions</a>
+    <a href="/how-we-work.html" class="nav__mobile-link">How We Work</a>
+    <a href="/about.html" class="nav__mobile-link">About</a>
+    <a href="/infrastructure.html" class="nav__mobile-link">Infrastructure</a>
+    <a href="/blog.html" class="nav__mobile-link">Blog</a>
+    <a href="/contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--md nav__mobile-cta" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+    </a>
+  </div>
 
-            <h2>2. Data Readiness</h2>
-            <ul>
-                <li>Data sources identified and documented</li>
-                <li>Data governance policies in place</li>
-                <li>Data quality baseline established</li>
-                <li>Historical data retention (12+ months minimum)</li>
-                <li>Data privacy and compliance frameworks (GDPR, CCPA)</li>
-            </ul>
+<!-- ===== ARTICLE HERO ===== -->
+<section class="article-hero">
+  <a href="/blog.html" class="article-hero__back">
+    <svg class="icon"><use href="#i-arrow-right"/></svg> Back to Insights
+  </a>
+  <span class="section-label">INSIGHTS</span>
+  <h1 class="article-hero__title">Is your business ready for AI? A practical checklist</h1>
+  <div class="article-hero__meta">
+    <span>March 2026</span>
+    <span class="article-hero__dot"></span>
+    <span>10 min read</span>
+    <span class="article-hero__dot"></span>
+    <span>Updated April 2026</span>
+  </div>
+</section>
 
-            <h2>3. Skills and Talent</h2>
-            <ul>
-                <li>Data science or ML engineering capability available</li>
-                <li>Data analysts on staff or available for hire</li>
-                <li>Business process expertise (domain knowledge)</li>
-                <li>Change management resources identified</li>
-                <li>Training budget allocated for upskilling</li>
-            </ul>
+<!-- ===== ARTICLE BODY ===== -->
+<div class="article">
+<p>There's a difference between "our business has access to AI tools" and "our business is ready to use AI effectively." Lots of companies fall into the first category. Fewer are genuinely in the second. The gap isn't technical. It's organisational.</p>
 
-            <h2>4. Business Process Maturity</h2>
-            <ul>
-                <li>Clear ROI targets defined for AI initiatives</li>
-                <li>Standardized processes to optimize</li>
-                <li>Metrics and KPIs in place</li>
-                <li>Organizational alignment on AI strategy</li>
-                <li>Budget approved for pilot and full deployment</li>
-            </ul>
+<p>As of April 2026, UK businesses increasingly have access to AI — but readiness remains the constraint. Recent research shows 54% of UK firms are actively using AI in operations, but that usage spans everything from well-governed pilots to uncontrolled shadow adoption. Being "ready for AI" doesn't mean you need expensive infrastructure. It means clarity: knowing what you're trying to solve, how you'll measure success, and who owns the outcome.</p>
 
-            <h2>5. Governance and Risk Management</h2>
-            <ul>
-                <li>AI ethics framework established</li>
-                <li>Model governance and monitoring plan</li>
-                <li>Bias testing and mitigation strategy</li>
-                <li>Compliance risk assessment completed</li>
-                <li>Stakeholder communication plan in place</li>
-            </ul>
-        </section>
+<h2>What "AI-ready" actually means</h2>
 
-        <section class="scoring">
-            <h2>Scoring Your Readiness</h2>
-            <table>
-                <tr>
-                    <th>Score</th>
-                    <th>Readiness Level</th>
-                    <th>Recommendation</th>
-                </tr>
-                <tr>
-                    <td>20-25 checks</td>
-                    <td>Highly Ready</td>
-                    <td>Proceed with strategic AI initiatives. Focus on scaling and optimization.</td>
-                </tr>
-                <tr>
-                    <td>15-19 checks</td>
-                    <td>Moderately Ready</td>
-                    <td>Start with pilot programs. Address gaps in parallel with pilots.</td>
-                </tr>
-                <tr>
-                    <td>10-14 checks</td>
-                    <td>Preparing</td>
-                    <td>Begin foundational work: build skills, establish governance, prepare data.</td>
-                </tr>
-                <tr>
-                    <td>Below 10</td>
-                    <td>Early Stage</td>
-                    <td>Focus on quick wins with low-risk AI tools to build internal capability.</td>
-                </tr>
-            </table>
-        </section>
+<ul>
+<li>Clearly describe its most time-consuming, repetitive processes</li>
+<li>Access the data those processes depend on</li>
+<li>Define what "correct" looks like for AI outputs in those processes</li>
+<li>Review and validate those outputs before they reach customers</li>
+<li>Measure whether the AI actually improves things or just shifts work around</li>
+</ul>
 
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Do we need all 25 items before starting AI?</h3>
-                <p>No. Start with pilots using low-risk, well-defined use cases. Address readiness gaps in parallel as you learn.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What's the fastest way to improve readiness?</h3>
-                <p>Prioritize: (1) data governance, (2) identifying use cases with existing data, (3) building internal expertise through training or hire.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What if we're lacking in skills?</h3>
-                <p>Hire consultants for pilots, invest in training, partner with vendors who provide managed services. Upskilling takes time—plan accordingly.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do we avoid ethical and compliance issues?</h3>
-                <p>Start by defining your AI ethics principles, establish model governance early, and audit models for bias before deployment.</p>
-            </div>
-        </section>
+<p>Notice that "have invested in expensive AI infrastructure" isn't on the list. Readiness is about understanding and process, not technology shopping.</p>
 
-        <section class="cta">
-            <h2>Next Steps</h2>
-            <p>Use this checklist as a team exercise. Identify your top 3 gaps and create a 90-day action plan to address them. Ready to dive deeper? Our AI strategy consulting services help businesses develop tailored roadmaps aligned with their specific readiness profile.</p>
-        </section>
-    </article>
+<h2>Signs you're ready to move forward</h2>
+
+<h3>You know what your expensive, repetitive work actually is</h3>
+<p>Genuinely ready businesses can name it: "We process 150 invoices per month, each one takes 20 minutes." If you can't describe it specifically, you're not ready yet.</p>
+
+<h3>Your data is reasonably well-organised</h3>
+<p>AI needs data. It doesn't need perfect data. But it needs to be accessible. Can you get the data to the AI tool when you need it?</p>
+
+<h3>You have someone who understands your processes deeply</h3>
+<p>Someone has to define the rules: "If the invoice is over £10k and from a new supplier, flag it." These rules come from people who actually do the work.</p>
+
+<h3>You can tolerate a pilot</h3>
+<p>If you're comfortable with "let's test this on 10% of the volume first, then expand," you're actually ready.</p>
+
+<h2>Warning signs you're not ready yet</h2>
+
+<h3>"We want to automate everything"</h3>
+<p>The businesses that succeed are ruthlessly specific. Start narrow and prove the model before expanding.</p>
+
+<h3>Nobody can agree on how the process actually works</h3>
+<p>AI can't codify something that isn't actually codified. Sort out the process first.</p>
+
+<h3>You're looking for AI to fix a people or management problem</h3>
+<p>If the underlying issue is that your team doesn't have a clear process, AI will just automate the inconsistency.</p>
+
+<h2>The real readiness checklist</h2>
+
+<div class="checklist">
+<div class="checklist-item"><div class="checklist-check"></div><div>We can name at least one specific, repetitive process that consumes significant time</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We understand what the "correct" output of that process looks like</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We can access the data the process requires</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>Someone understands the process deeply enough to define rules</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We're comfortable testing before full rollout</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We have someone who can review and validate AI outputs</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We can measure whether AI is actually improving things</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>Our data is reasonably organised</div></div>
+<div class="checklist-item"><div class="checklist-check"></div><div>We have a clear AI usage policy (or we're willing to create one)</div></div>
+</div>
+
+<p>If you can check at least six of these, you're genuinely ready to pilot an AI solution.</p>
+
+<blockquote><p><strong>A note on quick wins vs. capability building:</strong> You can get fast value from a narrow AI project. But real business transformation comes from building AI-readiness across your leadership and team. The quick wins are how you build the internal case for that larger capability.</p></blockquote>
+
+<h2>What to do if you're not ready yet</h2>
+
+<p><strong>First:</strong> Choose a specific process and understand it. That clarity is 80% of the work.</p>
+<p><strong>Second:</strong> Get the data accessible.</p>
+<p><strong>Third:</strong> Define the policy and rules.</p>
+<p><strong>Fourth:</strong> Find the pilots.</p>
+</div>
+
+<!-- ===== ARTICLE CTA ===== -->
+<section class="article-cta">
+  <div class="article-cta__box">
+    <h3 class="article-cta__title">Let's assess where you actually stand</h3>
+    <p class="article-cta__text">Book a 60-minute conversation. We'll work through the checklist, identify gaps, and create a roadmap to AI readiness — no pressure to buy anything.</p>
+    <a href="https://calendly.com/contact-utilistech/30min" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap">
+        <span class="btn__text">Schedule a Conversation</span>
+        <span class="btn__text-clone" aria-hidden="true">Schedule a Conversation</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/index.html" class="nav__logo">
+        <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+        <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+      </a>
+      <p class="footer__tagline">AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Services</h4>
+      <ul class="footer__col-links">
+        <li><a href="/solutions.html" class="footer__link">AI &amp; Automation</a></li>
+        <li><a href="/solutions.html" class="footer__link">Solutions</a></li>
+        <li><a href="/how-we-work.html" class="footer__link">How We Work</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Company</h4>
+      <ul class="footer__col-links">
+        <li><a href="/about.html" class="footer__link">About</a></li>
+        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+        <li><a href="/privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Insights</h4>
+      <ul class="footer__col-links">
+        <li><a href="/blog.html" class="footer__link">Blog</a></li>
+        <li><a href="/infrastructure.html" class="footer__link">Infrastructure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</span>
+    <div class="footer__bottom-links">
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" class="footer__attribution">ICO Registration</a>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer__attribution">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js" defer></script>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-utilistech', text: 'Book a Call', color: '#42dec3', textColor: '#0A0F0F', branding: false }); }</script>
+<script src="/chatbot-widget.js" data-api-url="https://utilistech-chatbot-dwdqatbbhwcubvgx.uksouth-01.azurewebsites.net/api/chat" defer></script>
+
 </body>
 </html>
