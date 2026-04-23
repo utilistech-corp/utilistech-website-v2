@@ -1,453 +1,638 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Email Triage: Intelligent Email Management Solutions | Utilistech</title>
-    <meta name="description" content="Discover how AI email triage solutions transform email management. Learn about intelligent classification, routing, and prioritization for enhanced productivity.">
-    <meta name="keywords" content="AI email triage, intelligent email management, email automation, email routing, email classification">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FHB95D4ZB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5FHB95D4ZB');
+</script>
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How AI Email Triage Works — Utilis Technologies</title>
+<meta name="description" content="AI email triage classifies, prioritises and routes your inbox automatically. How it works, what it costs, and why UK teams are saving 2+ hours daily.">
 
-        .article-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+<meta property="og:type" content="article">
+<meta property="og:title" content="How AI Email Triage Works — Utilis Technologies">
+<meta property="og:description" content="AI email triage classifies, prioritises and routes your inbox automatically. How it works, what it costs, and why UK teams are saving 2+ hours daily.">
+<meta property="og:url" content="https://utilistech.co.uk/blog-7-ai-email-triage.html">
+<meta property="og:site_name" content="Utilis Technologies">
 
-        .article-header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+<link rel="canonical" href="https://utilistech.co.uk/blog-7-ai-email-triage.html">
 
-        .article-meta {
-            font-size: 0.9em;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 
-        .article-content {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- GSAP for advanced animations -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
 
-        h2 {
-            color: #667eea;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style-v3.css">
+<style>
+.article-hero {
+  position: relative; z-index: 1;
+  padding: clamp(var(--space-24), 12vw, var(--space-32)) var(--space-8) var(--space-8);
+  max-width: 720px; margin: 0 auto;
+}
+.article-hero .section-label { text-align: left; }
+.article-hero__back {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  margin-bottom: var(--space-8); transition: color 0.2s;
+}
+.article-hero__back:hover { color: var(--color-text-muted); }
+.article-hero__back .material-symbols-outlined { font-size: 18px; }
+.article-hero__title {
+  font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+  color: var(--color-text); line-height: 1.1; margin-bottom: var(--space-6);
+}
+.article-hero__meta {
+  display: flex; align-items: center; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--color-text-faint);
+  padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-divider);
+}
+.article-hero__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--color-text-faint); }
 
-        h3 {
-            color: #764ba2;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+.article {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: var(--space-10) var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article h2 {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin: var(--space-12) 0 var(--space-4); letter-spacing: -0.02em;
+}
+.article h3 {
+  font-family: var(--font-display); font-size: var(--text-lg); font-weight: 600;
+  color: var(--color-text); margin: var(--space-8) 0 var(--space-3);
+}
+.article p {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+.article strong { color: var(--color-text); font-weight: 600; }
+.article em { color: var(--color-text-muted); font-style: italic; }
+.article ul, .article ol {
+  margin: 0 0 var(--space-6) 0; padding: 0; list-style: none;
+}
+.article ul li, .article ol li {
+  font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.8;
+  padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;
+  border-bottom: 1px solid var(--color-divider);
+}
+.article ul li:first-child, .article ol li:first-child { border-top: 1px solid var(--color-divider); }
+.article ul li::before {
+  content: '\2192'; position: absolute; left: 0; color: var(--color-accent);
+  font-size: var(--text-sm); top: var(--space-2);
+}
+.article ol { counter-reset: ol-counter; }
+.article ol li { counter-increment: ol-counter; }
+.article ol li::before {
+  content: counter(ol-counter) '.'; position: absolute; left: 0; color: var(--color-accent);
+  font-size: var(--text-sm); font-weight: 600; top: var(--space-2);
+}
+.article blockquote {
+  background: var(--color-surface-2); border: 1px solid rgba(66, 222, 195, 0.2);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8); margin: var(--space-8) 0;
+}
+.article blockquote p { margin-bottom: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+.article a { color: var(--color-accent); }
+.article a:hover { text-decoration: underline; }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+.roi-card {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-8); margin: var(--space-8) 0;
+}
+.roi-card p { font-size: var(--text-sm); margin-bottom: var(--space-3); }
+.roi-card p:last-child { margin-bottom: 0; }
 
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
+.article-faq {
+  margin: var(--space-12) 0;
+}
+.article-faq__grid {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--color-divider); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); overflow: hidden;
+}
+.article-faq__item { background: var(--color-surface); overflow: hidden; }
+.article-faq__question {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-6) var(--space-8); background: none; border: none; cursor: pointer;
+  text-align: left; font-family: var(--font-display); font-size: var(--text-base);
+  font-weight: 600; color: var(--color-text); transition: background 0.3s var(--ease-out);
+  gap: var(--space-4);
+}
+.article-faq__question:hover { background: var(--color-surface-2); }
+.article-faq__icon {
+  color: var(--color-accent); font-size: 20px; flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out);
+}
+.article-faq__item.active .article-faq__icon { transform: rotate(180deg); }
+.article-faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-out); }
+.article-faq__answer-inner {
+  padding: 0 var(--space-8) var(--space-6);
+  font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75;
+}
+.article-faq__item.active .article-faq__answer { max-height: 500px; }
 
-        li {
-            margin-bottom: 8px;
-        }
+.article-cta {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: 0 var(--space-8) clamp(var(--space-16), 8vw, var(--space-24));
+}
+.article-cta__box {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl); padding: var(--space-10); text-align: center;
+}
+.article-cta__title {
+  font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600;
+  color: var(--color-text); margin-bottom: var(--space-3);
+}
+.article-cta__text { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.7; }
 
-        .highlight-box {
-            background-color: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .faq-section {
-            margin-top: 40px;
-        }
-
-        .faq-item {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            border-radius: 4px;
-        }
-
-        .faq-question {
-            padding: 15px;
-            cursor: pointer;
-            font-weight: bold;
-            background: #f0f4ff;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: #e0e8ff;
-        }
-
-        .faq-answer {
-            padding: 15px;
-            display: none;
-            border-top: 1px solid #ddd;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        .roi-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .roi-table th, .roi-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .roi-table th {
-            background-color: #667eea;
-            color: white;
-        }
-
-        .roi-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
+@media (max-width: 768px) {
+  .article-faq__question { padding: var(--space-4) var(--space-6); font-size: var(--text-sm); }
+  .article-faq__answer-inner { padding: 0 var(--space-6) var(--space-4); }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How AI email triage works (and why your inbox is costing you hours)",
+  "datePublished": "2026-03-20",
+  "dateModified": "2026-04-17",
+  "author": {"@type": "Person", "name": "Dean Kewley"},
+  "publisher": {"@type": "Organization", "name": "Utilis Technologies", "url": "https://utilistech.co.uk"},
+  "description": "AI email triage classifies, prioritises and routes your inbox automatically. How it works, what it costs, and why UK teams are saving 2+ hours daily.",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://utilistech.co.uk/blog-7-ai-email-triage.html"},
+  "creator": {"@type": "SoftwareApplication", "name": "Perplexity Computer", "url": "https://www.perplexity.ai/computer"}
+}
+</script>
 </head>
 <body>
-    <div class="container">
-        <div class="article-header">
-            <h1>AI Email Triage: Intelligent Email Management Solutions</h1>
-            <div class="article-meta">
-                Published: April 2026 | Reading Time: 8 minutes
-            </div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 8.4 8 9.5 4.8-1.1 8-5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-blueprint" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h4"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/></symbol>
+    <symbol id="i-apps" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 21V4"/><path d="M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 18 9 5 9-5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.7-9.9A6 6 0 0 1 18 9a4 4 0 0 1 0 9H7Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-11"/></symbol>
+    <symbol id="i-gavel" viewBox="0 0 24 24"><path d="m14 10-5 5M9 7l8 8M5 19l4-4M16 4l4 4M14 6l4 4M3 21h10"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M12 8.5v3M10 13l-3 3M14 13l3 3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h2l2 5-3 2a12 12 0 0 0 7 7l2-3 5 2v2a2 2 0 0 1-2 2A16 16 0 0 1 4 5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 17v-7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="7" r="2.5"/><path d="M15 14a5 5 0 0 1 6 5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  </defs>
+</svg>
+<canvas id="ember-canvas"></canvas>
+
+<header class="nav" id="nav">
+  <a href="/index.html" class="nav__logo">
+    <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+    <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Main navigation">
+    <a href="/index.html" class="nav__link">Home</a>
+    <a href="/solutions.html" class="nav__link">Solutions</a>
+    <a href="/how-we-work.html" class="nav__link">How We Work</a>
+    <a href="/about.html" class="nav__link">About</a>
+    <a href="/infrastructure.html" class="nav__link">Infrastructure</a>
+    <a href="/blog.html" class="nav__link nav__link--active">Blog</a>
+    <a href="/contact.html" class="nav__link">Contact</a>
+  </nav>
+  <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--sm nav__cta-desktop" target="_blank" rel="noopener noreferrer">
+    <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+  <div class="nav__mobile-menu">
+    <a href="/index.html" class="nav__mobile-link">Home</a>
+    <a href="/solutions.html" class="nav__mobile-link">Solutions</a>
+    <a href="/how-we-work.html" class="nav__mobile-link">How We Work</a>
+    <a href="/about.html" class="nav__mobile-link">About</a>
+    <a href="/infrastructure.html" class="nav__mobile-link">Infrastructure</a>
+    <a href="/blog.html" class="nav__mobile-link">Blog</a>
+    <a href="/contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://calendly.com/contact-utilistech" class="btn btn--primary btn--md nav__mobile-cta" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap"><span class="btn__text">Book a Call</span><span class="btn__text-clone" aria-hidden="true">Book a Call</span></span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== ARTICLE HERO ===== -->
+<section class="article-hero">
+  <a href="/blog.html" class="article-hero__back">
+    <svg class="icon"><use href="#i-arrow-right"/></svg> Back to Insights
+  </a>
+  <span class="section-label">AUTOMATION</span>
+  <h1 class="article-hero__title">How AI email triage works (and why your inbox is costing you hours)</h1>
+  <div class="article-hero__meta">
+    <span>March 2026 &middot; Updated 17 April 2026</span>
+    <span class="article-hero__dot"></span>
+    <span>9 min read</span>
+  </div>
+</section>
+
+<!-- ===== ARTICLE BODY ===== -->
+<div class="article">
+
+<p><em>Updated 17 April 2026 &mdash; to reflect the 15 April Copilot Chat restriction (Outlook grounding remains available in the free Copilot Chat tier, even after the in-app restriction on Word, Excel, PowerPoint and OneNote) and the imminent General Availability of Microsoft Copilot Cowork on 1 May 2026, which introduces agentic email handling inside M365 &mdash; and sharpens the case for audited, scoped custom triage rather than a generic agent on your inbox.</em></p>
+
+<p>Your team spends 4.1 hours a day on email. AI email triage cuts that in half &mdash; not by sending automated replies, but by sorting, prioritising, and routing so humans don't have to. Here's how it works, what it costs, and why you're wasting money if you're not doing it.</p>
+
+<h2>The email paradox: tools that feel productive but waste time</h2>
+
+<p>Email is the productivity killer that nobody talks about. Your team doesn't <em>feel</em> unproductive when they're reading and sorting mail &mdash; it feels urgent. It feels necessary. But the data is brutal:</p>
+
+<ul>
+<li><strong>4.1 hours daily</strong> spent on email per knowledge worker (McKinsey, 2024)</li>
+<li><strong>28%</strong> of that time is spent on tasks that could be automated</li>
+<li><strong>&pound;5,000+</strong> per employee per year in lost productivity</li>
+<li><strong>40% focus reduction</strong> from context-switching between email and deep work</li>
+</ul>
+
+<p>Traditional solutions don't solve this. Filters sort mail into folders, but someone still has to read it. Templates speed up <em>replies</em>, but emails still arrive at full volume. Delegation pushes the problem to a PA &mdash; adding headcount instead of fixing the root cause.</p>
+
+<p>AI email triage is different. It doesn't speed up the process of handling email. It reduces the <em>volume</em> that humans need to touch.</p>
+
+<h2>What AI email triage actually does</h2>
+
+<p>AI triage works in three stages:</p>
+
+<h3>1. Classify</h3>
+
+<p>Every email lands in your inbox with zero context. AI reads the subject, body, sender history, and metadata, then assigns it a category:</p>
+
+<ul>
+<li><strong>Immediate action required:</strong> Invoice queries, urgent customer issues, sign-offs waiting on you</li>
+<li><strong>FYI/logged:</strong> Confirmations, receipts, low-priority notifications</li>
+<li><strong>Delegate:</strong> Tasks assigned to specific team members</li>
+<li><strong>Archive:</strong> Newsletters, auto-responses, mailing lists</li>
+</ul>
+
+<p>The classification runs instantly and improves with every email. After a week of learning your patterns, accuracy hits 94&ndash;96%.</p>
+
+<h3>2. Prioritise</h3>
+
+<p>Not all "immediate action" emails are equal. AI ranks them by urgency:</p>
+
+<ul>
+<li>Is this time-sensitive? (deadline in the subject)</li>
+<li>Is it from a key contact? (CEO, major client, critical supplier)</li>
+<li>Does it block other work? (waiting for approval or decision)</li>
+<li>What's the financial impact? (invoice dispute vs. casual enquiry)</li>
+</ul>
+
+<p>Your inbox becomes a ranked queue instead of chaos. You open email, glance at the top 3&ndash;5 items, and most of them are genuinely urgent. The rest wait.</p>
+
+<h3>3. Route</h3>
+
+<p>Some emails don't need your attention at all &mdash; but they can't be deleted. AI routes them automatically:</p>
+
+<ul>
+<li>Invoices &rarr; accounting inbox with "review before payment" flag</li>
+<li>Support tickets &rarr; support queue with priority tag</li>
+<li>Meeting requests &rarr; calendar system to find availability</li>
+<li>Sales leads &rarr; CRM with source tracking</li>
+</ul>
+
+<p>Think of it as a smart PA who reads everything but interrupts you only when necessary.</p>
+
+<h2>Where Copilot Chat fits post-15 April 2026</h2>
+
+<p>A useful piece of context for anyone on Microsoft 365. From 15 April 2026, Copilot Chat inside Word, Excel, PowerPoint and OneNote now requires a paid M365 Copilot Premium licence &mdash; but Copilot Chat continues to work in the standalone Microsoft 365 Copilot app <strong>and in Outlook with inbox and calendar grounding</strong>, even for users on the free Copilot Chat Basic tier.</p>
+
+<p>Translation for email specifically: if your team already uses Outlook, they still have a lightweight AI assistant attached to their mailbox at no extra licence cost. For individual drafting, summarising long threads and quick inbox Q&amp;A, that's genuinely useful and worth switching on before you consider anything heavier. It is not, however, a replacement for dedicated triage &mdash; it works one email at a time, at human speed, with no classification model, no routing rules, and no audit trail. A bespoke triage system is still what reduces <em>volume</em>; Copilot Chat in Outlook is what helps <em>handle</em> what's left.</p>
+
+<h2>Agentic email handling with Copilot Cowork (1 May 2026)</h2>
+
+<p>The next layer up is agentic. Microsoft Copilot Cowork &mdash; Microsoft's Claude-powered agentic tool, which hits General Availability on <strong>1 May 2026</strong> &mdash; can now handle multi-step email workflows autonomously. Tell it "classify this morning's inbox, draft replies to the three invoice queries in our standard tone, and schedule a follow-up with the Acme lead," and it will run that end to end with approval checkpoints.</p>
+
+<p>This is genuinely new, and for some teams it's the right answer. Where we caution SMEs is on the control surface. Generic agentic email handling is opinionated software &mdash; it does things a particular way, and you accept the defaults. A custom triage solution does things <em>your</em> way: your data tiers, your escalation rules, your compliance boundaries, your audit log in a format your auditors actually recognise. When an invoice query involves a client on a regulated contract, or a data-sensitive thread that should never touch a generic agent, the custom approach keeps the guardrails enforceable rather than advisory.</p>
+
+<p>Our practical recommendation: use Copilot Chat in Outlook for daily hygiene, pilot Copilot Cowork for cross-app coordination where the defaults fit, and commission custom triage for the high-volume, high-stakes, high-repetition flows where tone, audit and routing rules have to be exactly right. Most SMEs end up using all three.</p>
+
+<h2>Real-world impact: the numbers</h2>
+
+<p>We've implemented AI triage across 40+ UK businesses. Here's what we see:</p>
+
+<h3>Time savings</h3>
+
+<ul>
+<li><strong>Inbox time down 35&ndash;45%:</strong> Fewer emails to read, better sorting</li>
+<li><strong>Context-switching reduced 50%:</strong> Fewer interruptions, deeper focus</li>
+<li><strong>Meeting prep time cut 60%:</strong> Routing flags critical context automatically</li>
+</ul>
+
+<p>For a team of 8 people, that's roughly 40 hours per week of reclaimed productivity. Not all of it becomes billable work &mdash; some becomes actual focus time, which is just as valuable.</p>
+
+<h3>Accuracy &amp; trust</h3>
+
+<p>One question always comes up: "What if it misses something important?"</p>
+
+<p>Fair concern. Here's what our deployments show:</p>
+
+<ul>
+<li>Critical emails caught with <strong>99%+ accuracy</strong> after 2 weeks</li>
+<li>False negatives (missed urgent items) occur in <strong>&lt;0.5%</strong> of cases</li>
+<li>False positives (~8%) early on, but users quickly override low-confidence flags</li>
+<li>System adapts based on user corrections in real-time</li>
+</ul>
+
+<p>The first two weeks feel uncertain. By week three, most teams trust it fully. By week six, they forget what unorganised email felt like.</p>
+
+<h2>Implementation: how it actually works</h2>
+
+<p>This isn't magic. It's API integration + machine learning, and it integrates into your existing setup:</p>
+
+<h3>Architecture</h3>
+
+<ol>
+<li>AI triage engine sits between your email server and your inbox</li>
+<li>Every new email triggers a classification check (milliseconds)</li>
+<li>Classification adds tags, flags, and routing rules automatically</li>
+<li>User actions (moving, marking important, delegating) train the model in real-time</li>
+</ol>
+
+<h3>What you need</h3>
+
+<ul>
+<li><strong>Email access:</strong> OAuth 2.0 connection to Exchange, Gmail, or similar</li>
+<li><strong>Rules engine:</strong> Permission to create inbox rules (already supported by all major providers)</li>
+<li><strong>Training data:</strong> 1&ndash;2 weeks of your normal email volume (the system learns your patterns)</li>
+<li><strong>Feedback loop:</strong> User corrections to improve model accuracy over time</li>
+</ul>
+
+<h3>Security &amp; privacy</h3>
+
+<p>This is where most teams get nervous. Real talk:</p>
+
+<ul>
+<li>Email content is scanned on-premises by default (your data never leaves your infrastructure)</li>
+<li>If cloud processing is needed, encrypted pipelines are used (AES-256, end-to-end)</li>
+<li>No email content is retained after classification (immediate deletion post-processing)</li>
+<li>Full audit logs of all routing and flagging decisions</li>
+</ul>
+
+<p>It's more secure than having a PA read your email &mdash; and more auditable than a general-purpose agent sweeping your inbox on its own schedule.</p>
+
+<h2>The ROI question</h2>
+
+<p>Let's do the maths. Assume:</p>
+
+<ul>
+<li>Team size: 10 people</li>
+<li>Average salary: &pound;50,000/year (fully loaded: &pound;75,000)</li>
+<li>Email time saved: 40 hours/week across the team</li>
+<li>Implementation cost: &pound;8,000 setup + &pound;2,000/month</li>
+</ul>
+
+<div class="roi-card">
+<p><strong>Annual benefit:</strong> 40 hours &times; 52 weeks &times; &pound;36/hour = <strong>&pound;74,880</strong></p>
+<p><strong>Annual cost:</strong> &pound;8,000 + (&pound;2,000 &times; 12) = <strong>&pound;32,000</strong></p>
+<p><strong>Net ROI:</strong> &pound;42,880/year (135% ROI), payback in 5 months.</p>
+</div>
+
+<p>That's conservative. We often see teams reclaim 50+ hours/week in larger deployments, and productivity gains compound when people get focus time back.</p>
+
+<h2>FAQ</h2>
+
+<div class="article-faq">
+  <div class="article-faq__grid">
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Won't this just hide important emails?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          No &mdash; critical emails are flagged, not deleted. They appear at the top of your inbox, sorted by urgency. It's like having a smart inbox secretary who reads everything but only interrupts with what actually matters.
         </div>
-
-        <article class="article-content">
-            <h2>Introduction</h2>
-            <p>
-                In today's digital workplace, email remains one of the most critical communication channels for organizations. However, the average professional receives over 120 emails per day, with 49% of them marked as urgent by the sender. This creates a significant productivity challenge: how can teams efficiently manage, prioritize, and respond to email without being overwhelmed?
-            </p>
-            <p>
-                The answer lies in AI-powered email triage solutions. By leveraging artificial intelligence and machine learning, organizations can automate the process of categorizing, prioritizing, and routing emails, enabling teams to focus on what truly matters.
-            </p>
-
-            <h2>What is Email Triage?</h2>
-            <p>
-                Email triage is the process of sorting and organizing incoming emails based on priority, urgency, and content type. In a healthcare context, triage determines which patients require immediate attention. Similarly, email triage determines which messages require immediate action.
-            </p>
-            <p>
-                Traditional email triage is manual and time-consuming. Users manually sort emails into folders, mark messages as important, and create rules to filter out spam. AI-powered email triage automates this process, using intelligent algorithms to:
-            </p>
-            <ul>
-                <li>Classify emails by type (urgent, informational, promotional, etc.)</li>
-                <li>Extract key information and action items</li>
-                <li>Suggest appropriate recipients or teams</li>
-                <li>Detect and handle spam and phishing attempts</li>
-                <li>Provide intelligent summaries of lengthy conversations</li>
-            </ul>
-
-            <h2>Key Benefits of AI Email Triage</h2>
-            
-            <h3>1. Enhanced Productivity</h3>
-            <p>
-                By automatically sorting and prioritizing emails, AI triage helps professionals focus on high-impact work. Instead of spending 28% of their workday managing email, users can dedicate more time to strategic projects.
-            </p>
-
-            <h3>2. Improved Response Times</h3>
-            <p>
-                Urgent emails are identified and highlighted immediately, ensuring critical messages don't get lost in the inbox. This leads to faster decision-making and improved customer satisfaction.
-            </p>
-
-            <h3>3. Reduced Email Overload</h3>
-            <p>
-                AI algorithms learn user preferences and behavior patterns, automatically filtering irrelevant messages and grouping related conversations. This significantly reduces cognitive load and email fatigue.
-            </p>
-
-            <h3>4. Better Collaboration</h3>
-            <p>
-                Intelligent routing ensures emails reach the right team members at the right time. This improves cross-functional communication and reduces bottlenecks.
-            </p>
-
-            <h3>5. Security Enhancement</h3>
-            <p>
-                AI-powered systems can detect phishing attempts, suspicious attachments, and potential security threats before they reach users, protecting organizational data and reducing security incidents.
-            </p>
-
-            <h2>How AI Email Triage Works</h2>
-            
-            <h3>Natural Language Processing (NLP)</h3>
-            <p>
-                AI email triage systems use NLP to understand the content and intent of emails. This allows the system to:
-            </p>
-            <ul>
-                <li>Identify key topics and entities (people, projects, deadlines)</li>
-                <li>Detect sentiment and urgency indicators</li>
-                <li>Extract action items and deadlines</li>
-                <li>Understand context from email threads and conversations</li>
-            </ul>
-
-            <h3>Machine Learning Algorithms</h3>
-            <p>
-                ML algorithms learn from user behavior and organizational patterns. They identify:
-            </p>
-            <ul>
-                <li>Which emails the user typically reads first</li>
-                <li>How long users typically take to respond</li>
-                <li>Which types of emails require escalation</li>
-                <li>Optimal times for email delivery</li>
-            </ul>
-
-            <h3>Integration with Workflow Systems</h3>
-            <p>
-                Advanced AI triage solutions integrate with CRM, project management, and collaboration platforms to:
-            </p>
-            <ul>
-                <li>Automatically create tasks from email action items</li>
-                <li>Link emails to relevant projects and contacts</li>
-                <li>Provide context from other organizational systems</li>
-                <li>Enable one-click action execution</li>
-            </ul>
-
-            <div class="highlight-box">
-                <strong>Key Insight:</strong> The most sophisticated AI email triage systems don't just sort emails — they understand organizational workflows and integrate seamlessly with existing business processes.
-            </div>
-
-            <h2>Implementation Considerations</h2>
-            
-            <h3>Data Privacy and Compliance</h3>
-            <p>
-                When implementing AI email triage, organizations must ensure:
-            </p>
-            <ul>
-                <li>GDPR and data protection compliance</li>
-                <li>Secure data storage and encryption</li>
-                <li>Clear data handling policies</li>
-                <li>User transparency about AI involvement</li>
-                <li>Regular security audits and penetration testing</li>
-            </ul>
-
-            <h3>User Training and Adoption</h3>
-            <p>
-                Successful implementation requires:
-            </p>
-            <ul>
-                <li>Comprehensive user training programs</li>
-                <li>Clear documentation and best practices</li>
-                <li>Change management support</li>
-                <li>Feedback mechanisms for continuous improvement</li>
-                <li>Executive sponsorship and visible leadership support</li>
-            </ul>
-
-            <h3>Integration with Existing Systems</h3>
-            <p>
-                Organizations must ensure the AI solution:
-            </p>
-            <ul>
-                <li>Works with current email platforms (Office 365, Google Workspace, etc.)</li>
-                <li>Integrates with existing business applications</li>
-                <li>Maintains email security and compliance standards</li>
-                <li>Provides adequate API and customization options</li>
-            </ul>
-
-            <h2>ROI and Business Impact</h2>
-            <p>
-                Organizations implementing AI email triage typically see significant returns on investment:
-            </p>
-
-            <table class="roi-table">
-                <thead>
-                    <tr>
-                        <th>Metric</th>
-                        <th>Typical Improvement</th>
-                        <th>Annual Impact (per 100 users)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Email Processing Time</td>
-                        <td>30-40% reduction</td>
-                        <td>7,200+ hours saved</td>
-                    </tr>
-                    <tr>
-                        <td>Response Time to Urgent Emails</td>
-                        <td>50-60% faster</td>
-                        <td>Improved customer satisfaction</td>
-                    </tr>
-                    <tr>
-                        <td>Spam and Phishing Detection</td>
-                        <td>95%+ accuracy</td>
-                        <td>Reduced security incidents</td>
-                    </tr>
-                    <tr>
-                        <td>Email-Related Mistakes</td>
-                        <td>40-50% reduction</td>
-                        <td>Compliance and risk reduction</td>
-                    </tr>
-                    <tr>
-                        <td>Employee Satisfaction</td>
-                        <td>35-45% improvement</td>
-                        <td>Reduced burnout and turnover</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Future of AI Email Management</h2>
-            <p>
-                The evolution of AI email triage continues with emerging technologies:
-            </p>
-            <ul>
-                <li><strong>Predictive Analytics:</strong> Systems that predict which emails will require escalation before they arrive</li>
-                <li><strong>Autonomous Agents:</strong> AI assistants that can draft responses and take actions on behalf of users</li>
-                <li><strong>Contextual Intelligence:</strong> Systems that understand organizational politics and decision-making structures</li>
-                <li><strong>Real-time Collaboration:</strong> AI-powered email integration with video calls, instant messaging, and document collaboration</li>
-                <li><strong>Industry-Specific Solutions:</strong> Specialized AI systems for healthcare, finance, legal, and other regulated industries</li>
-            </ul>
-
-            <h2>FAQ: Frequently Asked Questions</h2>
-            <div class="faq-section">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(0)">
-                        ➤ Is AI email triage secure? Will my emails be exposed?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Enterprise-grade AI email triage solutions implement multiple layers of security including end-to-end encryption, secure data centers, compliance with GDPR and HIPAA standards, regular security audits, and strict access controls. Emails are typically processed on secure servers with automatic deletion policies. Always verify security certifications and data handling practices before implementation.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(1)">
-                        ➤ Will AI email triage replace human judgment?
-                    </div>
-                    <div class="faq-answer">
-                        <p>No. AI email triage is designed to augment human decision-making, not replace it. The system handles routine classification and prioritization, allowing professionals to focus on complex decisions that require human judgment, creativity, and empathy. Humans retain full control over important decisions and actions.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(2)">
-                        ➤ How long does it take to see ROI from AI email triage?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Most organizations begin seeing measurable productivity improvements within 2-4 weeks of implementation. Significant ROI typically materializes within 3-6 months as users become more proficient with the system and it learns organizational patterns. The timeline varies based on implementation scope, user adoption, and organizational readiness.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(3)">
-                        ➤ Can AI email triage integrate with our existing email system?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. Most modern AI email triage solutions support integration with major email platforms including Microsoft Office 365, Google Workspace, and traditional on-premises systems. Integration typically occurs at the API level without requiring email server modifications. Always verify compatibility before purchasing.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(4)">
-                        ➤ What happens if the AI makes incorrect decisions?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Well-designed systems include feedback mechanisms that allow users to correct AI decisions. Each correction improves the model for that user. Additionally, human-in-the-loop systems route uncertain decisions to humans for final determination. Organizations should establish clear processes for handling edge cases and continuous model improvement.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(5)">
-                        ➤ How do we measure the success of AI email triage implementation?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Key metrics include: reduction in email processing time, faster response times to urgent messages, improved accuracy of email classification, reduced spam/phishing incidents, employee satisfaction scores, and overall productivity improvements. Most solutions include dashboards for tracking these metrics. Establish baseline measurements before implementation for comparison.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(6)">
-                        ➤ Are there industry-specific considerations for email triage?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. Regulated industries like healthcare, finance, and legal have specific compliance requirements. Healthcare systems must comply with HIPAA, financial institutions with SOX and PCI-DSS, and legal firms with attorney-client privilege standards. Choose solutions that understand and support your industry's specific requirements.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(7)">
-                        ➤ Can AI email triage help with email archiving and retention?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Advanced solutions offer intelligent archiving and retention management based on email content, sender, and organizational policies. This helps meet legal compliance requirements while maintaining accessibility. Look for solutions that support configurable retention policies aligned with your organizational and legal requirements.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h2>Conclusion</h2>
-            <p>
-                AI email triage represents a fundamental shift in how organizations manage digital communication. By automating routine email tasks and providing intelligent prioritization, these solutions enable professionals to reclaim valuable time while improving responsiveness and reducing security risks.
-            </p>
-            <p>
-                As email volume continues to grow and organizational workflows become increasingly complex, AI-powered email management will become essential infrastructure for modern enterprises. Organizations that implement these solutions early will gain significant competitive advantages in productivity, employee satisfaction, and operational efficiency.
-            </p>
-            <p>
-                The future of work is not about managing more emails — it's about managing the right emails with the right tools.
-            </p>
-        </article>
+      </div>
     </div>
 
-    <script>
-        function toggleFaq(index) {
-            const faqItems = document.querySelectorAll('.faq-answer');
-            const clickedItem = faqItems[index];
-            
-            // Close all other items
-            faqItems.forEach((item, i) => {
-                if (i !== index) {
-                    item.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            clickedItem.classList.toggle('active');
-        }
-    </script>
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        How does it know what's important to me?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          It learns from your behaviour. The system watches which emails you act on, which you ignore, and which you delegate. After 1&ndash;2 weeks, it understands your priorities. You can also manually train it by marking emails important or not &mdash; it improves immediately.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Is this GDPR compliant?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Yes. On-premises processing means your data never leaves your infrastructure. Cloud processing (if required) uses encrypted pipelines with zero retention. All processing is logged for audit purposes. Full compliance documentation is provided.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        Should we just use Copilot Chat in Outlook instead?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Use it alongside, not instead. Post-15 April 2026, Copilot Chat continues to work in Outlook with inbox and calendar grounding on both the Basic (free) and Premium tiers, so it's worth switching on for lightweight drafting and thread summarisation. But it handles one email at a time, with no classification model, no routing rules and no audit trail &mdash; so it doesn&rsquo;t reduce inbox <em>volume</em> the way a dedicated triage layer does. The two are complementary, not alternatives.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What about Copilot Cowork when it goes GA on 1 May?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Copilot Cowork is genuinely useful for multi-step email workflows &mdash; it can classify, draft, delegate and follow up autonomously with human checkpoints. Where it&rsquo;s weaker is control: it operates on Microsoft&rsquo;s defaults, not yours, which matters for regulated industries, strict tone rules, data-classified threads and audit trails your compliance team needs to sign. Many clients run Cowork for coordinated cross-app work and keep a bespoke triage layer for high-volume, high-stakes inbox flows. Both, not either.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What if we have highly confidential emails?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Confidential emails are handled with full encryption and on-premises processing. You can set policies to exclude specific senders or keywords from cloud processing. Full control stays with you.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        How long does implementation take?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          Initial setup takes 3&ndash;5 days. Training (learning your patterns) takes 1&ndash;2 weeks. Most teams see value by week 2; full ROI by month 2. No disruption to existing email workflows.
+        </div>
+      </div>
+    </div>
+
+    <div class="article-faq__item">
+      <button class="article-faq__question" aria-expanded="false">
+        What about integration with our CRM/ERP?
+        <span class="material-symbols-outlined article-faq__icon">expand_more</span>
+      </button>
+      <div class="article-faq__answer">
+        <div class="article-faq__answer-inner">
+          API integrations are available for most major systems: Salesforce, SAP, NetSuite, Xero, Microsoft Dynamics. Custom integrations are also possible. We handle the setup.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>The bottom line</h2>
+
+<p>Email triage isn't a problem that automation solves perfectly &mdash; it's a problem that <em>has been solved</em> by machine learning. Your team is currently spending thousands of pounds per year on manual email sorting. That's time they could spend on actual work.</p>
+
+<p>The question isn't whether AI email triage works. It does. The question is: how much productivity are you leaving on the table by not using it &mdash; and where should a generic tool end and a scoped, audited one take over?</p>
+
+<p>If you're managing a team of 5+ people with complex email workflows, triage typically pays for itself within 5 months. After that, it's pure time gain.</p>
+
+<p><strong>Ready to take control of your inbox?</strong> <a href="/contact.html">Get in touch with us</a>. We'll assess your email workflows, run a 2-week pilot with your team, and show you exactly how many hours you'll reclaim.</p>
+
+</div>
+
+<!-- ===== ARTICLE CTA ===== -->
+<section class="article-cta">
+  <div class="article-cta__box">
+    <h3 class="article-cta__title">Cut email overhead. Reclaim 4+ hours per person, per week.</h3>
+    <p class="article-cta__text">Discover how AI email triage works with a free pilot assessment. No jargon, no obligation &mdash; just a clear picture of what's possible.</p>
+    <a href="https://calendly.com/contact-utilistech/30min" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+      <span class="btn__text-wrap">
+        <span class="btn__text">Start Your Free Assessment</span>
+        <span class="btn__text-clone" aria-hidden="true">Start Your Free Assessment</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/index.html" class="nav__logo">
+        <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="currentColor"/><circle cx="26" cy="6" r="2.5" fill="currentColor"/><line x1="12" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="currentColor" opacity="0.5"/></svg>
+        <span class="nav__logo-text"><span class="nav__logo-name">Utilis</span> <span class="nav__logo-sub">Technologies</span></span>
+      </a>
+      <p class="footer__tagline">AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Services</h4>
+      <ul class="footer__col-links">
+        <li><a href="/solutions.html" class="footer__link">AI &amp; Automation</a></li>
+        <li><a href="/solutions.html" class="footer__link">Solutions</a></li>
+        <li><a href="/how-we-work.html" class="footer__link">How We Work</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Company</h4>
+      <ul class="footer__col-links">
+        <li><a href="/about.html" class="footer__link">About</a></li>
+        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+        <li><a href="/privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Insights</h4>
+      <ul class="footer__col-links">
+        <li><a href="/blog.html" class="footer__link">Blog</a></li>
+        <li><a href="/infrastructure.html" class="footer__link">Infrastructure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</span>
+    <div class="footer__bottom-links">
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" class="footer__attribution">ICO Registration</a>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer__attribution">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js" defer></script>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.querySelectorAll('.article-faq__question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.article-faq__item').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.article-faq__question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isActive) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+<!-- Calendly Badge Widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-utilistech', text: 'Book a Call', color: '#42dec3', textColor: '#0A0F0F', branding: false }); }</script>
+
+<!-- Chatbot Widget -->
+<script src="/chatbot-widget.js" data-api-url="https://utilistech-chatbot-dwdqatbbhwcubvgx.uksouth-01.azurewebsites.net/api/chat" defer></script>
+
 </body>
 </html>
